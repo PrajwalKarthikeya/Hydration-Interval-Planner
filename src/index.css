@@ -1,0 +1,90 @@
+:root {
+  /* Zen minimalist palette inspired by Grain & Brewfully */
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --surface-hover: #f5f5f4;
+  --border: #e7e5e4;
+  --border-hover: #d6d3d1;
+
+  --primary: #78716c;
+  --primary-dark: #57534e;
+  --primary-light: #a8a29e;
+
+  --text: #1c1917;
+  --text-secondary: #57534e;
+  --text-tertiary: #a8a29e;
+
+  --accent: #78716c;
+  --success: #65a30d;
+  --warning: #ca8a04;
+
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+input, select {
+  font-family: inherit;
+  outline: none;
+}
+
+input:focus, select:focus {
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}

@@ -1,0 +1,133 @@
+.timer-card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid var(--border);
+}
+
+.progress-ring {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+
+.progress-svg {
+  transform: scaleX(-1);
+}
+
+.progress-bg {
+  stroke: var(--border);
+}
+
+.progress-bar {
+  stroke: var(--primary);
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.3s ease;
+}
+
+.timer-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.time {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.interval-display {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+}
+
+.btn-pause, .btn-resume {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--surface);
+}
+
+.btn-pause:hover, .btn-resume:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-stop {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text-secondary);
+}
+
+.btn-stop:hover {
+  background: var(--surface-hover);
+  border-color: var(--border-hover);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .timer-card {
+    padding: 2rem;
+  }
+
+  .progress-ring {
+    width: 200px;
+    height: 200px;
+  }
+
+  .time {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-ring {
+    width: 180px;
+    height: 180px;
+  }
+
+  .time {
+    font-size: 2.5rem;
+  }
+
+  .timer-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-control {
+    width: 100%;
+  }
+}
